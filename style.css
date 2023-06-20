@@ -1,0 +1,74 @@
+h1 {
+    text-align: center;
+}
+
+#slogan{
+    text-align: end;
+}
+
+main {
+    position: relative;
+    border: 5px solid blue;
+}
+
+table {
+    position: sticky;
+    top: 0px;
+}
+
+aside {
+    position: fixed;
+    top: 50px;
+    right: 0px;
+    background-color: rgba(255, 255, 255, .8);
+    padding-inline: 10px;
+    border-radius: 15px;
+}
+form > button {
+    margin-bottom: 10px;
+}
+
+#menuSection {
+    border: 5px solid black;
+    padding-left: 50px;
+    margin-bottom: 100px;
+}
+
+.expensiveItem {
+    color: green;
+}
+
+/* Child Selector */
+p > a {
+    color: yellow;
+    text-shadow: 0px 0px 5px black;
+}
+
+/* Descendant Selector */
+header h2 {
+    text-decoration: underline;
+}
+
+#delivery > form > fieldset > * {
+    display: block;
+    margin: 5px;
+}
+
+table {
+    border: 3px solid red;
+    padding: 5px;
+    border-collapse: collapse;
+}
+
+tr {
+    background-color: grey;
+}
+
+th,
+td {
+    padding: 5px;
+}
+
+tr:nth-child(even){
+    background-color: rgb(255, 127, 38);
+}
