@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <style>
+        body {
+            margin: 24px;
+            background-color: rgb(222, 222, 222);
+        }
+        .child {
+            width: 80px;
+            height: 80px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        .container {
+            height: 160px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid blue;
+        }
+        .child:nth-child(even){
+            background-color: lightblue;
+            align-self: start;
+        }
+        .child:nth-child(odd){
+            background-color: lightcoral;
+            align-self: end;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+    </div>
+</body>
+</html>
