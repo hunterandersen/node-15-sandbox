@@ -20,9 +20,28 @@ setTimeout(() => {
     ol.appendChild(newLi);
 
     for (let i = 0; i < liArr.length; i++){
-        liArr[i].style.fontSize = "3rem";
+        liArr[i].style.fontSize = "1.3rem";
     }
     for (const li of liArr){
         li.style.color = "blue";
     }
 }, 3000);
+
+
+let tableColor = 0;
+const floatingMenu = document.querySelector("table");
+
+function toggleColor(){
+    tableColor += 30;
+    tableColor %= 255;
+    floatingMenu.style.borderColor = `rgb(${tableColor}, 0, 0)`;
+}
+
+function toggleMenu(){
+    floatingMenu.hidden = !floatingMenu.hidden;
+}
+
+const toggleColorBtn = document.getElementById("colorButton");
+
+toggleColorBtn.addEventListener("click", toggleColor);
+toggleColorBtn.addEventListener("click", toggleMenu);
