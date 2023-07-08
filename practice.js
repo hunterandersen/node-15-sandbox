@@ -1,6 +1,17 @@
 const addToCartButtons = document.querySelectorAll(".add-to-cart");
 
-class shoppingItem {
+
+/**
+ * Describes one item that a customer can purchase
+ */
+class ShoppingItem {
+    /**
+     * @param {string} title
+     * @param {number} price
+     * @param {number} quantity
+     * @param {string} description
+     * @param {string[]} classifications
+     */
     constructor(title, price, quantity = 0, description = "", classifications = []){
         this.title = title;
         this.price = price;
@@ -17,19 +28,23 @@ class shoppingItem {
         this.quantity++;
     }
 
-    setPrice(newPrice){
+    setPrice(newPrice, thing){
         this.price = newPrice;
     }
 
-    addClassification(){
+    addClassification(newClassification){
         this.classifications.push(newClassification);
+    }
+
+    removeClassification(prevClassification){
+        this.classifications = this.classifications.filter(c => c!=prevClassification);
     }
 
 }
 
 //Component State (Memory for this moment in time)
-const shoppingCartState = [
-
+const mockItemData = [
+    new ShoppingItem()
 ];
 
 const checkoutForm = document.querySelector("#checkout-form");
