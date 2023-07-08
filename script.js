@@ -1,67 +1,31 @@
-const house = {
-    squareFeet: 3000,
-    numRooms: 8,
-    doors: [],
-    twoStories: true,
-    extColor: "green",
-    lockUp(){
-        //Close all the doors in the house
-        this.doors.forEach(door => door.close());
+//Toasters make promises
+
+//Nice, golden brown toast,
+//Blackened charred, worthless toast
+
+//Asynchronous operations
+
+//Creating a Promise using the Promise constructor
+//OOP - instance of a class
+const toastPromise = new Promise((res, rej) => {
+    //This is what the promise is attempting
+    //This is the part where it tries to toast the bread
+    const rand = Math.random();
+    if (rand > .5){
+        //This is what it does if the toast was successful
+        res("Yay, golden-brown toast!");
+    } else {
+        //This is what it does if it was unsuccessful
+        rej("Ugh, burnt toast");
     }
-};
+});
 
-//Keys on an object:
-    //Properties
-//Functions on an object - Methods
-
-//Example 1
-const houseBlueprint = {
-    roof: {},
-    doors: [],
-    bathrooms: 1
-}
-
-const redHouse = Object.create(houseBlueprint);
-redHouse.extColor = "red";
-console.log(redHouse);
-
-//Example 2
-//Constructor
-// function Rectangle(x, y){
-//     //this keyword refers to the containing object
-//     this.x = x;
-//     this.y = y;
-// }
-
-//Create an instance of the object
-// const myRectangle = new Rectangle(5, 7);
-// console.log(myRectangle);
-
-//Example 3
-//Creating a blueprint for an object instance
-class Rectangle {
-    constructor(x, y){
-        this.x = x;
-        this.y = y;
-    }
-    calcPerimeter(){
-        return this.x * this.y;
-    }
-}
-
-//Inherit from the Rectangle
-class Square extends Rectangle {
-    constructor(a){
-        super(a, a);
-        this.angle = 90;
-    }
-    calcPerimeter(){
-        return this.x * this.y + 1;
-    }
-}
-
-//Creating the actual (realized) instance of the class
-const secondRectangle = new Rectangle(4, 3);
-console.log(secondRectangle.calcPerimeter());
-const mySquare = new Square(3);
-console.log(mySquare);
+//Consuming the promise
+//Telling the promise what to do on either result (pass/fail)
+//If the toast was good, what should I do?
+//If the toast was burnt, what should I do?
+toastPromise.then((result) => {
+    console.log(result);
+}).catch((err) => {
+    console.error(err);
+});

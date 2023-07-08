@@ -45,3 +45,9 @@ const toggleColorBtn = document.getElementById("colorButton");
 
 toggleColorBtn.addEventListener("click", toggleColor);
 toggleColorBtn.addEventListener("click", toggleMenu);
+
+
+
+const userTextInput = document.getElementById("userText");
+console.log(userTextInput);
+userTextInput.textContent = "Testing";

@@ -1,5 +1,43 @@
 const addToCartButtons = document.querySelectorAll(".add-to-cart");
 
+class shoppingItem {
+    constructor(title, price, quantity = 0, description = "", classifications = []){
+        this.title = title;
+        this.price = price;
+        this.quantity = quantity;
+        this.description = description;
+        this.classifications = classifications;
+    }
+
+    remove() {
+        this.quantity = 0;
+    }
+
+    addToCart() {
+        this.quantity++;
+    }
+
+    setPrice(newPrice){
+        this.price = newPrice;
+    }
+
+    addClassification(){
+        this.classifications.push(newClassification);
+    }
+
+}
+
+//Component State (Memory for this moment in time)
+const shoppingCartState = [
+
+];
+
+const checkoutForm = document.querySelector("#checkout-form");
+checkoutForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    console.log(event.target);
+});
+
 const tallySheet = {};
 
 addToCartButtons.forEach((button) => {
