@@ -44,7 +44,37 @@ class ShoppingItem {
 
 //Component State (Memory for this moment in time)
 const mockItemData = [
-    new ShoppingItem()
+    new ShoppingItem(
+        "Gel-Resolution 9 Tennis Shoe",
+        129.95,
+        0,
+        "Men's Tennis Shoe",
+        ["Asics", "Men", "Men's", "Shoe", "Apparel", "Tennis", "Sport"]
+    ), new ShoppingItem(
+        "Crosscourt Modern Sneaker",
+        68.14,
+        0,
+        "Men's Sneaker",
+        ["Cole Haan", "Men", "Men's", "Shoe", "Apparel", "Crosscourt", "Sport"]
+    ), new ShoppingItem(
+        "Gel-Nimbus 24 Running Shoes",
+        80.00,
+        0,
+        "Men's Running Shoes",
+        ["Asics", "Men", "Men's", "Shoe", "Apparel", "Running", "Sport"]
+    ), new ShoppingItem(
+        "Super Liga Og Retro Sneaker",
+        64.98,
+        0,
+        "Men's Sneaker",
+        ["Puma", "Men", "Men's", "Shoe", "Apparel", "Retro"]
+    ), new ShoppingItem(
+        "Endorphin Speed 2 Running Shoe",
+        99.99,
+        0,
+        "Men's Shoe",
+        ["Saucony", "Men", "Men's", "Shoe", "Apparel", "Running", "Sport"]
+    )
 ];
 
 const checkoutForm = document.querySelector("#checkout-form");
